@@ -1,0 +1,21 @@
+.container {
+    text-align: center;
+}
+
+.not-found-error {
+    min-width: 40%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+a {
+    display: block;
+    margin-bottom: 30px;
+}
+
+h1 {
+    padding-top: 30px;
+}
+
+button {
+    margin-bottom: 30px;
+}

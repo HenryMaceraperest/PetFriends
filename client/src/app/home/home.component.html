@@ -1,15 +1,15 @@
-<div class="container mt-5">
-    <div *ngIf="!registerMode" style="text-align: center;">
+<div class="container image-container">
+    <div *ngIf="!registerMode" class="main-container">
         <h1>Find friends for your friends!</h1>
         <p class="lead">Sign up to see other furry friends in your vicinity!</p>
         <div class="text-center">
-            <button (click)="registerToggle()" class="btn btn-primary btb-lg me-2">Register</button>
-            <button class="btn btn-primary btb-lg">Learn more.</button>
+            <button (click)="registerToggle()" class="btn btn-info btb-lg me-2">Register</button>
+            <button class="btn btn-info btb-lg">Learn more.</button>
         </div>
     </div>
-    <div *ngIf="registerMode" class="container">
-        <div class="row justify-content-center">
-            <div class="col-4">
+    <div *ngIf="registerMode" class="container register-container">
+        <div class="row">
+            <div class="">
                 <app-register (cancelRegister)="cancelRegistration($event)"></app-register>
             </div>
         </div>

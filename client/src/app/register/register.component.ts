@@ -21,8 +21,7 @@ export class RegisterComponent implements OnInit {
       next: () => {
         this.cancel();
         this.router.navigateByUrl('/members');      
-      },
-      error: error => console.log(error)
+      }
     })  
     
   }
