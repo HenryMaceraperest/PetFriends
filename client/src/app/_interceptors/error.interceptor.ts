@@ -18,11 +18,10 @@ export class ErrorInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       catchError((e: HttpErrorResponse) => {
-        if (e) {
-          console.log(e);
-          
+        if (e) {          
           switch (e.status) {
             case 400:
+              console.log(e);
               if (e.error.errors) {
                 const modelStateErrors = [];
                 for (const key in e.error.errors) {
