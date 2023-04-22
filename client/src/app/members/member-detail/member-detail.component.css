@@ -1,0 +1,26 @@
+.card {
+    padding: 25px;
+}
+
+.img-thumbnail {
+    margin: 25px;
+    max-height: 85%;
+    width: 85%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    padding: 0px 25px;
+}
+
+.card-footer {
+    padding: 10 25px;
+    background-color: #fff;
+    border-top: none;
+}
+
+.ngx-gallery {
+    display: inline-block;
+    margin: 20px;
+}
