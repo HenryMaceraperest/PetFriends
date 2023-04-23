@@ -5,6 +5,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { GalleryModule } from 'ng-gallery';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -19,13 +20,15 @@ import { GalleryModule } from 'ng-gallery';
     }),
     NgxGalleryModule,
     GalleryModule,
+    NgxSpinnerModule.forRoot({ type: 'ball-newton-cradle'})
   ],
   exports: [
     BsDropdownModule,
     ToastrModule,
     TabsModule,
     NgxGalleryModule,
-    GalleryModule
+    GalleryModule,
+    NgxSpinnerModule
   ]
 })
 export class SharedModule { }
