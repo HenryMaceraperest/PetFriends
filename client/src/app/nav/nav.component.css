@@ -10,3 +10,11 @@
 input {
     color: white !important;
 }
+
+img {
+    max-height: 40px;
+    border-radius: 30px;
+    border: 2px solid purple;
+    display: inline;
+    margin-right: 10px;
+}

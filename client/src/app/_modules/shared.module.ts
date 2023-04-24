@@ -6,6 +6,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { GalleryModule } from 'ng-gallery';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { FileUploadModule } from 'ng2-file-upload';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 
 
@@ -20,7 +22,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     }),
     NgxGalleryModule,
     GalleryModule,
-    NgxSpinnerModule.forRoot({ type: 'ball-newton-cradle'})
+    NgxSpinnerModule.forRoot({ type: 'ball-newton-cradle'}),
+    FileUploadModule,
+    ProgressbarModule.forRoot()
   ],
   exports: [
     BsDropdownModule,
@@ -28,7 +32,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     TabsModule,
     NgxGalleryModule,
     GalleryModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FileUploadModule,
+    ProgressbarModule
   ]
 })
 export class SharedModule { }
