@@ -1,7 +1,7 @@
 <div class="row mt-4" *ngIf="member">
   <div class="col-4">
     <div class="card">
-        <img src="{{member.photoUrl}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
+        <img src="{{member.photoUrl || '../../../../../assets/user.avif'}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
         <div class="card-body">
             <div>
                 <strong>Location:</strong>

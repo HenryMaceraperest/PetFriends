@@ -8,6 +8,7 @@ import { GalleryModule } from 'ng-gallery';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 
@@ -24,7 +25,8 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
     GalleryModule,
     NgxSpinnerModule.forRoot({ type: 'ball-newton-cradle'}),
     FileUploadModule,
-    ProgressbarModule.forRoot()
+    ProgressbarModule.forRoot(),
+    BsDatepickerModule.forRoot(),
   ],
   exports: [
     BsDropdownModule,
@@ -34,7 +36,8 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
     GalleryModule,
     NgxSpinnerModule,
     FileUploadModule,
-    ProgressbarModule
+    ProgressbarModule,
+    BsDatepickerModule
   ]
 })
 export class SharedModule { }

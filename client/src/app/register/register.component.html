@@ -1,14 +1,34 @@
-<form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
+<form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
   <h2 class="text-center text-primary mt-4">Sign Up</h2>
   <hr>
   <div class="mb-3">
-    <input type="text" class="form-control" name="username" [(ngModel)]="model.username" placeholder="Username">
-  </div>   
-  <div class="mb-3">
-    <input type="password" class="form-control" name="password" [(ngModel)]="model.password" placeholder="Password">
+    <label style="margin-right: 10px;">The pet is a: </label>
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input ms-2" value="male" formControlName="gender">Boy
+    </label>
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input ms-2" value="male" formControlName="gender">Girl
+    </label>
   </div>
+ <app-text-input [formControl]="$any(registerForm.controls['username'])" [label]="'Username'"></app-text-input>
+ <app-text-input [formControl]="$any(registerForm.controls['knownAs'])" [label]="'Nickname'"></app-text-input>
+ <app-date-picker [formControl]="$any(registerForm.controls['userDateOfBirth'])" [label]="'Date of Birth - Yourself'" [maxDate]="maxDateUser"></app-date-picker>
+ <app-date-picker [formControl]="$any(registerForm.controls['petDateOfBirth'])" [label]="'Date of Birth - Your Pet'" [maxDate]="maxDatePet"></app-date-picker>
+ <app-text-input [formControl]="$any(registerForm.controls['city'])" [label]="'City'"></app-text-input>
+ <app-text-input [formControl]="$any(registerForm.controls['country'])" [label]="'Country'"></app-text-input>
+ <app-text-input [formControl]="$any(registerForm.controls['password'])" [label]="'Password'" [type]="'password'"></app-text-input>
+ <app-text-input [formControl]="$any(registerForm.controls['confirmPassword'])" [label]="'Confirmation Password'" [type]="'password'"></app-text-input>
+
+ <div class="row" *ngIf="validationErrors">
+  <ul class="text-danger">
+    <li *ngFor="let error of validationErrors">
+      {{error}}
+    </li>
+  </ul>
+ </div>
+
   <div class="text-center">
-    <button class="btn btn-info me-2" type="submit">Register</button>
+    <button [disabled]="!registerForm.valid" class="btn btn-info me-2" type="submit">Register</button>
     <button class="btn btn-info" type="button" (click)="cancel()">Cancel</button>
   </div>
 </form>
