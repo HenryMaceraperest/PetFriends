@@ -9,6 +9,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TimePastPipe } from 'ng-time-past-pipe';
 
 
 
@@ -27,6 +30,9 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     FileUploadModule,
     ProgressbarModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
+    TimePastPipe
   ],
   exports: [
     BsDropdownModule,
@@ -37,7 +43,10 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     NgxSpinnerModule,
     FileUploadModule,
     ProgressbarModule,
-    BsDatepickerModule
+    BsDatepickerModule,
+    PaginationModule,
+    ButtonsModule,
+    TimePastPipe
   ]
 })
 export class SharedModule { }

@@ -7,6 +7,7 @@ namespace API.DTOs
         [Required] public string Username {get; set;}
         [Required] public string KnownAs { get; set; }
         [Required] public string Gender { get; set; }
+        [Required] public string PetType { get; set; }
         [Required] public DateOnly? UserDateOfBirth { get; set; }
         [Required] public DateOnly? PetDateOfBirth { get; set; }
         [Required] public string City { get; set; }
