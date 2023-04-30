@@ -16,7 +16,7 @@ export class MemberListComponent {
   pagination: Pagination | undefined;
   userParams: UserParams | undefined;
   genderList = [{value: 'male', display: 'Boys'}, {value: 'female', display: 'Girls'}, {value: '', display: 'Any'}];
-  petTypeList = [{value: 'dog', display: 'Dogs'}, {value: 'cat', display: 'Cats'}, {value: '', display: 'Any'}];
+  petTypeList = [{value: 'dog', display: 'Dogs'}, {value: 'cat', display: 'Cats'}];
 
   constructor(private memberService: MembersService) {
     this.userParams = this.memberService.getUserParams();
