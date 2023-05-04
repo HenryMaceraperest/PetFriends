@@ -1,0 +1,8 @@
+.img-circle {
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: 1px solid pink;
+}
