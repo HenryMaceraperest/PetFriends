@@ -24,3 +24,7 @@
     display: inline-block;
     margin: 20px;
 }
+
+.online-icon {
+    color: rgb(73, 184, 0);
+}

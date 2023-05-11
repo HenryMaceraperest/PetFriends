@@ -23,7 +23,11 @@
         <h6 class="card-title text-center mb-1">
             {{member.knownAs}}, {{member.petAge}}
         </h6>
-        <i class="d-flex justify-content-center fa me-2" [ngClass]="member.gender === 'female' ? 'fa-venus' : 'fa-mars'">{{member.gender === 'female' ? '- Girl' : '- Boy'}}</i>
+        <span class="d-flex justify-content-center">
+            <i class="fa me-2" [ngClass]="member.gender === 'female' ? 'fa-venus' : 'fa-mars'">
+            </i><span class="me-2">{{member.gender === 'female' ? 'Girl' : 'Boy'}}</span>
+            <i  [class.is-online]="(presenceService.onlineUsers$ | async)?.includes(member.userName)" [ngClass]="(presenceService.onlineUsers$ | async)?.includes(member.userName) ? 'fa fa-solid fa-globe' : ''"></i>
+        </span>
         <p class="card-text text-muted text-center">{{member.city}}</p>
     </div>
 </div>
